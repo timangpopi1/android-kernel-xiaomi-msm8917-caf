@@ -340,7 +340,7 @@ config SUSPEND_SKIP_SYNC
 	  of suspend, or they are content with invoking sync() from
 	  user-space before invoking suspend. Say Y if that's your case.
 
-config	BOEFFLA_WL_BLOCKER
+config BOEFFLA_WL_BLOCKER
 		bool "Boeffla generic wakelock blocker driver"
 		depends on PM
 		default N
@@ -358,15 +358,7 @@ config POWERSUSPEND_DEBUG
 	help
 	  Output debugging info in dmesg
 
-config	BOEFFLA_WL_BLOCKER
-		bool "Boeffla generic wakelock blocker driver"
-		depends on PM
-		default N
-
-config QUICK_WAKEUP
-	bool "Quick wakeup"
+config PM_SYNC_BEFORE_SUSPEND
+	bool "Sync file systems before suspend"
 	depends on SUSPEND
 	default y
-	---help---
-	  Allow kernel driver to do periodic jobs without resuming the full system
-	  This option can increase battery life on android powered smartphone.
