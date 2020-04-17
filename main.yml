@@ -1,0 +1,23 @@
+kind: pipeline
+name: kernel_build
+
+platform:
+  os: linux
+  arch: amd64
+
+clone:
+  depth: 1
+
+steps:
+  - name: Compile
+    image: fadlyas/kernel_dockerfile:latest
+    environment:
+      TZ: Asia/Jakarta
+      token:
+        from_secret: token
+      chat_id:
+        from_secret: chat_id
+    commands:
+      - git checkout
+      - wget https://github.com/timangpopi1/scripts/raw/master/kernel.sh
+      - bash kernel.sh
