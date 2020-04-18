@@ -300,16 +300,3 @@
 #define EVERGREEN_DP_SEC_AUD_N                          0x7294
 #       define EVERGREEN_DP_SEC_N_BASE_MULTIPLE(x)      (((x) & 0xf) << 24)
 #       define EVERGREEN_DP_SEC_SS_EN                   (1 << 28)
-
-/*DCIO_UNIPHY block*/
-#define NI_DCIO_UNIPHY0_UNIPHY_TX_CONTROL1            (0x6600  -0x6600)
-#define NI_DCIO_UNIPHY1_UNIPHY_TX_CONTROL1            (0x6640  -0x6600)
-#define NI_DCIO_UNIPHY2_UNIPHY_TX_CONTROL1            (0x6680 - 0x6600)
-#define NI_DCIO_UNIPHY3_UNIPHY_TX_CONTROL1            (0x66C0 - 0x6600)
-#define NI_DCIO_UNIPHY4_UNIPHY_TX_CONTROL1            (0x6700 - 0x6600)
-#define NI_DCIO_UNIPHY5_UNIPHY_TX_CONTROL1            (0x6740 - 0x6600)
-
-#define NI_DCIO_UNIPHY0_PLL_CONTROL1                   0x6618
-#       define NI_DCIO_UNIPHY0_PLL_CONTROL1_ENABLE     (1 << 0)
-
-#endif
